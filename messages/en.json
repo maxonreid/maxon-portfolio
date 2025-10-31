@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact",
+    "cta": "Let's Work Together"
+  },
+  "home": {
+    "hero": {
+      "greeting": "Hi, I'm Maxon",
+      "title": "Developer & Designer",
+      "description": "Building performant and refined apps and digital solutions."
+    }
+  }
+}
