@@ -27,3 +27,73 @@ h1, h2, h3, h4, h5, h6 {
 code, pre {
   font-family: 'JetBrains Mono', monospace;
 }
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes twinkle-slow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.3);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+    filter: brightness(1.5);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle ease-in-out infinite;
+}
+
+.animate-twinkle-slow {
+  animation: twinkle-slow ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-twinkle,
+  .animate-twinkle-slow,
+  .animate-pulse-glow,
+  .animate-pulse-slow {
+    animation: none;
+    opacity: 0.5;
+  }
+}
