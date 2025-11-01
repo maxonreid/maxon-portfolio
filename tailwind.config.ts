@@ -23,6 +23,7 @@ const config: Config = {
         heading: ['JetBrains Mono', 'monospace'],
         body: ['IBM Plex Sans', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
+        lao: ['Lao Universe', 'IBM Plex Sans', 'sans-serif'],
       },
     },
   },

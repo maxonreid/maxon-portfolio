@@ -5,9 +5,9 @@ import { motion } from 'framer-motion'
 export default function About() {
   const highlights = [
     'Full-stack web development',
-    'Modern UI/UX design',
-    'Performance optimization',
-    'Scalable architecture',
+    'Mobile app development',
+    'Web Development Instructor',
+
   ]
 
   return (

@@ -33,7 +33,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body>
+      <body className={locale === 'lo' ? 'font-lao' : ''}>
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           <main>{children}</main>

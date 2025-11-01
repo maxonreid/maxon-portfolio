@@ -158,7 +158,7 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="font-heading font-bold text-5xl md:text-7xl text-textPrimary mb-6 leading-tight"
         >
-          Building web apps and digital solutions.
+          Building the tools that help startups run efficiently and grow globally.
         </motion.h1>
 
         <motion.p
@@ -167,7 +167,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-xl md:text-2xl text-textSecondary mb-8 max-w-3xl mx-auto"
         >
-          I develop web applications that will supercharge your business and scale globally — based in Vientiane, Laos.
+          Internationalization, speed, and reliability—engineered for startups heading to their next step.
         </motion.p>
 
         <motion.div
@@ -177,16 +177,16 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Link
-            href="/projects"
+            href="/contact"
             className="px-8 py-3 bg-primary text-background font-semibold rounded-lg hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
           >
-            View My Work
+            Start a project
           </Link>
           <Link
-            href="/contact"
+            href="/projects"
             className="px-8 py-3 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-background transition-all"
           >
-            Contact Me
+            View My Work
           </Link>
         </motion.div>
       </div>

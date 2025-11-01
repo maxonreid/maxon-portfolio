@@ -3,10 +3,11 @@
 import { useLocale } from 'next-intl'
 import { usePathname, useRouter } from '@/lib/navigation'
 import { useState, useTransition } from 'react'
+import ReactCountryFlag from 'react-country-flag'
 
 const languages = [
-  { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'lo', name: 'ລາວ', flag: '🇱🇦' }
+  { code: 'en', name: 'English', countryCode: 'us' },
+  { code: 'lo', name: 'ລາວ', countryCode: 'la' }
 ]
 
 export default function LanguageSwitcher() {
@@ -32,8 +33,16 @@ export default function LanguageSwitcher() {
         className="flex items-center gap-2 px-3 py-2 rounded-lg border border-border hover:bg-surface transition-colors"
         disabled={isPending}
       >
-        <span>{currentLanguage?.flag}</span>
-        <span className="text-sm font-medium">{currentLanguage?.code.toUpperCase()}</span>
+        <span>{currentLanguage?.name}
+          &nbsp;
+          <ReactCountryFlag
+            svg
+            countryCode={currentLanguage?.countryCode}
+            style={{ width: '1.25rem', height: '1.25rem' }}
+            title={currentLanguage?.name}
+            aria-label={currentLanguage?.name} />
+        </span>
+        {/* <span className="text-sm font-medium">{currentLanguage?.code.toUpperCase()}</span> */}
         <svg
           className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
@@ -50,11 +59,12 @@ export default function LanguageSwitcher() {
             <button
               key={lang.code}
               onClick={() => handleLanguageChange(lang.code)}
-              className={`w-full flex items-center gap-3 px-4 py-3 hover:bg-background transition-colors ${
-                locale === lang.code ? 'bg-background text-primary' : 'text-textSecondary'
-              }`}
+              className={`w-full flex items-center gap-3 px-4 py-3 hover:bg-background transition-colors ${locale === lang.code ? 'bg-background text-primary' : 'text-textSecondary'
+                }`}
             >
-              <span className="text-xl">{lang.flag}</span>
+              <span className="text-xl">
+                <ReactCountryFlag svg countryCode={lang.countryCode} style={{ width: '1.25rem', height: '1.25rem' }} title={lang.name} aria-label={lang.name} />
+              </span>
               <span className="text-sm font-medium">{lang.name}</span>
             </button>
           ))}
