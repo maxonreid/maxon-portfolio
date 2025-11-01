@@ -22,7 +22,36 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="font-heading font-bold text-2xl text-primary hover:text-secondary transition-colors">
-            Maxon
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              width="36"
+              height="36"
+              aria-label="MW Logo"
+            >
+              {/* <!-- Outer frame --> */}
+              <rect
+                x="24"
+                y="24"
+                width="464"
+                height="464"
+                fill="none"
+                stroke="#3B19FF"
+                stroke-width="32"
+                rx="16"
+                ry="16"
+              />
+              {/* <!-- M --> */}
+              <path
+                d="M128 120h64l64 72 64-72h64v144h-64V192l-64 72-64-72v72h-64V120z"
+                fill="#00E0C6"
+              />
+              {/* <!-- W --> */}
+              <path
+                d="M128 392V248h64v72l64-72 64 72v-72h64v144h-64l-64-72-64 72h-64z"
+                fill="#00E0C6"
+              />
+            </svg>
           </Link>
 
           {/* Desktop Navigation */}
