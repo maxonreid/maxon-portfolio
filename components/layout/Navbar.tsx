@@ -37,7 +37,7 @@ export default function Navbar() {
                 height="464"
                 fill="none"
                 stroke="#3B19FF"
-                stroke-width="32"
+                strokeWidth="32"
                 rx="16"
                 ry="16"
               />

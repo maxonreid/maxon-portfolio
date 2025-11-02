@@ -1,11 +1,13 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
+
 
 export default function About() {
   const highlights = [
-    'Full-stack web development',
-    'Mobile app development',
+    'Full-Stack Web Development',
+    'Mobile App Development',
     'Web Development Instructor',
 
   ]
@@ -23,13 +25,13 @@ export default function About() {
             <h2 className="font-heading font-bold text-4xl md:text-5xl text-textPrimary mb-6">
               About Me
             </h2>
-            
+
             <p className="text-textSecondary text-lg mb-6 leading-relaxed">
-              I&apos;m a passionate developer focused on creating exceptional digital experiences. 
-              With expertise in modern web technologies, I help businesses build scalable 
-              and performant applications.
+              I&apos;m a full-stack developer focused on building fast, 
+              reliable, and user-friendly web applications that help businesses grow globally
+              — Based in <b>Vientiane, Laos.</b>
             </p>
-            
+
             <div className="space-y-3">
               {highlights.map((highlight) => (
                 <div key={highlight} className="flex items-center gap-3">
@@ -39,7 +41,7 @@ export default function About() {
               ))}
             </div>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -47,7 +49,11 @@ export default function About() {
             className="order-1 md:order-2"
           >
             <div className="aspect-square bg-background border-2 border-border rounded-2xl flex items-center justify-center hover:border-primary/50 transition-colors">
-              <span className="text-textMuted font-mono text-sm">Photo Placeholder</span>
+              <Image
+                src="/images/profile-pic.jpg"
+                alt='Profile Picture'
+                width={500}
+                height={500} />
             </div>
           </motion.div>
         </div>

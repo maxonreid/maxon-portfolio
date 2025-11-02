@@ -4,13 +4,14 @@
     "projects": "Projects",
     "blog": "Blog",
     "contact": "Contact",
-    "cta": "Let's Work Together"
+    "cta": "Start a project"
   },
   "home": {
     "hero": {
-      "greeting": "Hi, I'm Maxon",
-      "title": "Developer & Designer",
-      "description": "Building performant and refined apps and digital solutions."
+      "headline": "Let’s build tools that help your business grow globally.",
+      "subhead": "Fast, reliable, and ready for the global stage.",
+      "ctaPrimary": "Start a project",
+      "ctaSecondary": "View My Work"
     }
   }
 }

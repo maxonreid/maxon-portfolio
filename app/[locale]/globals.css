@@ -12,6 +12,11 @@
   font-display: swap;
 }
 
+/* Utility to force Lao font where needed */
+.font-lao {
+  font-family: 'Lao Universe', 'IBM Plex Sans', sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
